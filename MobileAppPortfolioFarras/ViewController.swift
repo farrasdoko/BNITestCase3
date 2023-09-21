@@ -73,10 +73,12 @@ struct HistoryTransaction: Codable, Equatable {
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var chartView: BarChartView!
+    @IBOutlet weak var chartView: PieChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupPieChart()
         
         let staticData = """
     [{
@@ -154,6 +156,54 @@ class ViewController: UIViewController {
         }
         
         var values: [Any] = []
+        
+        do {
+            for element in data {
+                let jsonData = try JSONSerialization.data(withJSONObject: element, options: [])
+                
+                if let donutValue: DonutChart = BNIHelper.decodeJson(from: jsonData) {
+                    values.append(donutValue)
+//                    print("123: - Donat value: \(donutValue)")
+                } else if let lineValue: LineChart = BNIHelper.decodeJson(from: jsonData) {
+                    values.append(lineValue)
+//                    print("123: - Line value: \(lineValue)")
+                } else {
+//                    XCTFail("Unknown type: \(type(of: element))")
+//                    XCTFail("It is: \(element))")
+                }
+            }
+        } catch {
+            print("Error serializing NSDictionary: \(error)")
+        }
+        
+        for value in values {
+            if let donutValue = value as? DonutChart {
+                // TODO: operate donutValue
+            } else if let lineValue = value as? LineChart {
+                // TODO: operate lineValue
+            }
+        }
+        
+        let entries: [PieChartDataEntry] = (values[0] as! DonutChart).data.map { data in
+            return PieChartDataEntry(value: Double(data.percentage) ?? 0, label: data.label)
+        }
+        
+        let dataSet = PieChartDataSet(entries: entries, label: "-")
+        dataSet.colors = ChartColorTemplates.material()
+        
+        let data2 = PieChartData(dataSet: dataSet)
+        
+        // Optionally, add value formatting and styling here
+        data2.setValueFormatter(DefaultValueFormatter(formatter: NumberFormatter()))
+        data2.setValueFont(UIFont.systemFont(ofSize: 12))
+        data2.setValueTextColor(UIColor.black)
+        
+        chartView.data = data2
+    }
+    func setupPieChart() {
+        chartView.holeRadiusPercent = 0.1
+        chartView.chartDescription.enabled = true
+        chartView.noDataText = "No data available"
+        chartView.chartDescription.text = "Portfolio Chart"
     }
 }
-
