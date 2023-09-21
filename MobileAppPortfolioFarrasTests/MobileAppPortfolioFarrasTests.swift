@@ -9,28 +9,61 @@ import XCTest
 @testable import MobileAppPortfolioFarras
 
 final class MobileAppPortfolioFarrasTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    override class func setUp() {
+        super.setUp()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override class func tearDown() {
+        super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testDecodeDifferentData_Nil() {
+        let sut: String? = nil
+        let data: [Any]? = serializeStringToAny(from: sut)
+        XCTAssertNil(data, "Invalid JSON string")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testDecodeDifferentData_DecodeFailed() {
+        let sut = "asdadasd"
+        let data: [Any]? = serializeStringToAny(from: sut)
+        XCTAssertNil(data, "Error decoding JSON: JSON text did not start with array or object and option to allow fragments not set.")
+    }
+    
+    func testDecodeDifferentData_Success() {
+        let jsonExample = "[1, \"2\"]"
+        
+        let data: [Any]? = serializeStringToAny(from: jsonExample)
+        var sutArray: [Any] = []
+        
+        if let data = data {
+            for element in data {
+                if let intValue = element as? Int {
+                    sutArray.append(intValue)
+                } else if let stringValue = element as? String {
+                    sutArray.append(stringValue)
+                } else {
+                    XCTFail("Unknown type: \(type(of: element))")
+                }
+            }
+        }
+        
+        XCTAssertEqual(sutArray.count, 2)
+        XCTAssertEqual(sutArray.first as? Int, 1)
+        XCTAssertEqual(sutArray[1] as? String, "2")
+    }
+    
+    private func serializeStringToAny<T>(from string: String?, file: StaticString = #filePath, line: UInt = #line) -> T? {
+        if let jsonData = string?.data(using: .utf8) {
+            do {
+                let jsonArray = try JSONSerialization.jsonObject(with: jsonData, options: []) as? T
+                return jsonArray
+            } catch {
+                // XCTFail("Error decoding JSON: \(error)", file: file, line: line)
+                return nil
+            }
+        } else {
+            // XCTFail("Invalid JSON string", file: file, line: line)
+            return nil
         }
     }
-
 }
