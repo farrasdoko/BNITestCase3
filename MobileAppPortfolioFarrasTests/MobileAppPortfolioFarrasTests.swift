@@ -26,6 +26,17 @@ struct DonutChart: Codable, Equatable {
 struct DonutChartData: Codable, Equatable {
     let label: String
     let percentage: String
+    let data: [HistoryTransaction]
+}
+
+struct HistoryTransaction: Codable, Equatable {
+    let trxDate: String
+    let nominal: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case trxDate = "trx_date"
+        case nominal = "nominal"
+    }
 }
 
 final class MobileAppPortfolioFarrasTests: XCTestCase {
@@ -116,44 +127,17 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
                     "data": [{
                             "label": "Tarik Tunai",
                             "percentage": "55",
-                            "data": [{
-                                "trx_date": "21/01/2023",
-                                "nominal": 1000000
-                            }, {
-                                "trx_date": "20/01/2023",
-                                "nominal": 500000
-                            }, {
-                                "trx_date": "19/01/2023",
-                                "nominal": 1000000
-                            }]
+                            "data": []
                         },
                         {
                             "label": "QRIS Payment",
                             "percentage": "31",
-                            "data": [{
-                                "trx_date": "21/01/2023",
-                                "nominal": 159000
-                            }, {
-                                "trx_date": "20/01/2023",
-                                "nominal": 35000
-                            }, {
-                                "trx_date": "19/01/2023",
-                                "nominal": 1500
-                            }]
+                            "data": []
                         },
                         {
                             "label": "Topup Gopay",
                             "percentage": "7.7",
-                            "data": [{
-                                "trx_date": "21/01/2023",
-                                "nominal": 200000
-                            }, {
-                                "trx_date": "20/01/2023",
-                                "nominal": 195000
-                            }, {
-                                "trx_date": "19/01/2023",
-                                "nominal": 5000000
-                            }]
+                            "data": []
                         },
                         {
                             "label": "Lainnya",
@@ -175,10 +159,14 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
         
         let sut: DonutChart? = decodeJson(from: donutChart)
         let typeExpectation = [
-            DonutChartData(label: "Tarik Tunai", percentage: "55"),
-            DonutChartData(label: "QRIS Payment", percentage: "31"),
-            DonutChartData(label: "Topup Gopay", percentage: "7.7"),
-            DonutChartData(label: "Lainnya", percentage: "6.3")
+            DonutChartData(label: "Tarik Tunai", percentage: "55", data: []),
+            DonutChartData(label: "QRIS Payment", percentage: "31", data: []),
+            DonutChartData(label: "Topup Gopay", percentage: "7.7", data: []),
+            DonutChartData(label: "Lainnya", percentage: "6.3", data: [
+                HistoryTransaction(trxDate: "21/01/2023", nominal: 1000000),
+                HistoryTransaction(trxDate: "20/01/2023", nominal: 500000),
+                HistoryTransaction(trxDate: "19/01/2023", nominal: 1000000),
+            ])
         ]
         XCTAssertEqual(sut?.type, "donutChart")
         XCTAssertEqual(sut?.data, typeExpectation)
@@ -283,10 +271,26 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
         
         XCTAssertEqual(sut.count, 2)
         XCTAssertEqual(sut[0] as? DonutChart, DonutChart(type: "donutChart", data: [
-            DonutChartData(label: "Tarik Tunai", percentage: "55"),
-            DonutChartData(label: "QRIS Payment", percentage: "31"),
-            DonutChartData(label: "Topup Gopay", percentage: "7.7"),
-            DonutChartData(label: "Lainnya", percentage: "6.3"),
+            DonutChartData(label: "Tarik Tunai", percentage: "55", data: [
+                HistoryTransaction(trxDate: "21/01/2023", nominal: 1000000),
+                HistoryTransaction(trxDate: "20/01/2023", nominal: 500000),
+                HistoryTransaction(trxDate: "19/01/2023", nominal: 1000000),
+            ]),
+            DonutChartData(label: "QRIS Payment", percentage: "31", data: [
+                HistoryTransaction(trxDate: "21/01/2023", nominal: 159000),
+                HistoryTransaction(trxDate: "20/01/2023", nominal: 35000),
+                HistoryTransaction(trxDate: "19/01/2023", nominal: 1500),
+            ]),
+            DonutChartData(label: "Topup Gopay", percentage: "7.7", data: [
+                HistoryTransaction(trxDate: "21/01/2023", nominal: 200000),
+                HistoryTransaction(trxDate: "20/01/2023", nominal: 195000),
+                HistoryTransaction(trxDate: "19/01/2023", nominal: 5000000),
+            ]),
+            DonutChartData(label: "Lainnya", percentage: "6.3", data: [
+                    HistoryTransaction(trxDate: "21/01/2023", nominal: 1000000),
+                    HistoryTransaction(trxDate: "20/01/2023", nominal: 500000),
+                    HistoryTransaction(trxDate: "19/01/2023", nominal: 1000000),
+            ]),
         ]))
         XCTAssertEqual(sut[1] as? LineChart, LineChart(type: "lineChart", data: [
             "month": [3, 7, 8, 10, 5, 10, 1, 3, 5, 10, 7, 7]
