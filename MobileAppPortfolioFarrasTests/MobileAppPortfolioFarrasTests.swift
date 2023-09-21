@@ -8,37 +8,6 @@
 import XCTest
 @testable import MobileAppPortfolioFarras
 
-struct LineChart: Codable, Equatable {
-    let type: String
-    let data: [String: [Int]]
-    
-    enum CodingKeys: String, CodingKey {
-        case type
-        case data
-    }
-}
-
-struct DonutChart: Codable, Equatable {
-    let type: String
-    let data: [DonutChartData]
-}
-
-struct DonutChartData: Codable, Equatable {
-    let label: String
-    let percentage: String
-    let data: [HistoryTransaction]
-}
-
-struct HistoryTransaction: Codable, Equatable {
-    let trxDate: String
-    let nominal: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case trxDate = "trx_date"
-        case nominal = "nominal"
-    }
-}
-
 final class MobileAppPortfolioFarrasTests: XCTestCase {
     
     override class func setUp() {
@@ -50,20 +19,20 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
     
     func testDecodeDifferentData_Nil() {
         let sut: String? = nil
-        let data: [Any]? = serializeStringToAny(from: sut)
+        let data: [Any]? = BNIHelper.serializeStringToAny(from: sut)
         XCTAssertNil(data, "Invalid JSON string")
     }
     
     func testDecodeDifferentData_DecodeFailed() {
         let sut = "asdadasd"
-        let data: [Any]? = serializeStringToAny(from: sut)
+        let data: [Any]? = BNIHelper.serializeStringToAny(from: sut)
         XCTAssertNil(data, "Error decoding JSON: JSON text did not start with array or object and option to allow fragments not set.")
     }
     
     func testDecodeDifferentData_Success() {
         let jsonExample = "[1, \"2\"]"
         
-        let data: [Any]? = serializeStringToAny(from: jsonExample)
+        let data: [Any]? = BNIHelper.serializeStringToAny(from: jsonExample)
         var sutArray: [Any] = []
         
         if let data = data {
@@ -82,27 +51,12 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
         XCTAssertEqual(sutArray.first as? Int, 1)
         XCTAssertEqual(sutArray[1] as? String, "2")
     }
-    
-    private func serializeStringToAny<T>(from string: String?, file: StaticString = #filePath, line: UInt = #line) -> T? {
-        if let jsonData = string?.data(using: .utf8) {
-            do {
-                let jsonArray = try JSONSerialization.jsonObject(with: jsonData, options: []) as? T
-                return jsonArray
-            } catch {
-                // XCTFail("Error decoding JSON: \(error)", file: file, line: line)
-                return nil
-            }
-        } else {
-            // XCTFail("Invalid JSON string", file: file, line: line)
-            return nil
-        }
-    }
     func testDecodeJson_Error() {
         let lineChart = """
             {}
         """
         
-        let sut: LineChart? = decodeJson(from: lineChart)
+        let sut: LineChart? = BNIHelper.decodeJson(from: lineChart)
         XCTAssertNil(sut, "No value associated with key ...")
     }
     func testLineChartData_Success() {
@@ -115,7 +69,7 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
             }
         """
         
-        let sut: LineChart? = decodeJson(from: lineChart)
+        let sut: LineChart? = BNIHelper.decodeJson(from: lineChart)
         XCTAssertEqual(sut?.type, "lineChart")
         XCTAssertEqual(sut?.data, ["month": [3, 7, 8, 10, 5, 10, 1, 3, 5, 10, 7, 7]] )
     }
@@ -157,7 +111,7 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
                 }
         """
         
-        let sut: DonutChart? = decodeJson(from: donutChart)
+        let sut: DonutChart? = BNIHelper.decodeJson(from: donutChart)
         let typeExpectation = [
             DonutChartData(label: "Tarik Tunai", percentage: "55", data: []),
             DonutChartData(label: "QRIS Payment", percentage: "31", data: []),
@@ -242,7 +196,7 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
     }
     ]
     """
-        let data: [NSDictionary]? = serializeStringToAny(from: staticData)
+        let data: [NSDictionary]? = BNIHelper.serializeStringToAny(from: staticData)
         guard let data = data else {
             XCTFail("Data can't be nil")
             return
@@ -254,12 +208,10 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
             for element in data {
                 let jsonData = try JSONSerialization.data(withJSONObject: element, options: [])
                 
-                if let donutValue: DonutChart = decodeJson(from: jsonData) {
+                if let donutValue: DonutChart = BNIHelper.decodeJson(from: jsonData) {
                     sut.append(donutValue)
-                    print("123: - Donat value: \(donutValue)")
-                } else if let lineValue: LineChart = decodeJson(from: jsonData) {
+                } else if let lineValue: LineChart = BNIHelper.decodeJson(from: jsonData) {
                     sut.append(lineValue)
-                    print("123: - Line value: \(lineValue)")
                 } else {
                     XCTFail("Unknown type: \(type(of: element))")
                     XCTFail("It is: \(element))")
@@ -295,20 +247,5 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
         XCTAssertEqual(sut[1] as? LineChart, LineChart(type: "lineChart", data: [
             "month": [3, 7, 8, 10, 5, 10, 1, 3, 5, 10, 7, 7]
         ]))
-    }
-    private func decodeJson<T: Codable>(from data: Data, file: StaticString = #filePath, line: UInt = #line) -> T? {
-        do {
-            return try JSONDecoder().decode(T.self, from: data)
-        } catch {
-//            print("Error: \(error)")
-            return nil
-        }
-    }
-    private func decodeJson<T: Codable>(from str: String, file: StaticString = #filePath, line: UInt = #line) -> T? {
-        if let jsonData = str.data(using: .utf8) {
-            return decodeJson(from: jsonData, file: file, line: line)
-        } else {
-            return nil
-        }
     }
 }
