@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4432B38F43F60BDD0FEDA213 /* Pods_MobileAppPortfolioFarrasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F211D4D9DB44A1C69C12DA7 /* Pods_MobileAppPortfolioFarrasTests.framework */; };
+		5EC5CDD4BECD3421B2CD063A /* Pods_MobileAppPortfolioFarras.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454910B24D477326E2AAC484 /* Pods_MobileAppPortfolioFarras.framework */; };
+		EAD4629064C5940441FC639B /* Pods_MobileAppPortfolioFarras_MobileAppPortfolioFarrasUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4CD92D3450BFB5FE27CFF9 /* Pods_MobileAppPortfolioFarras_MobileAppPortfolioFarrasUITests.framework */; };
 		EDD76D292ABBF1F2007BA34E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D282ABBF1F2007BA34E /* AppDelegate.swift */; };
 		EDD76D2B2ABBF1F2007BA34E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D2A2ABBF1F2007BA34E /* SceneDelegate.swift */; };
 		EDD76D2D2ABBF1F2007BA34E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D2C2ABBF1F2007BA34E /* ViewController.swift */; };
@@ -36,6 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F211D4D9DB44A1C69C12DA7 /* Pods_MobileAppPortfolioFarrasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileAppPortfolioFarrasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35A0A30C3B95ADC13A1489F6 /* Pods-MobileAppPortfolioFarrasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAppPortfolioFarrasTests.release.xcconfig"; path = "Target Support Files/Pods-MobileAppPortfolioFarrasTests/Pods-MobileAppPortfolioFarrasTests.release.xcconfig"; sourceTree = "<group>"; };
+		3DCF439DF9FB09658B2D3B62 /* Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.debug.xcconfig"; path = "Target Support Files/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		454910B24D477326E2AAC484 /* Pods_MobileAppPortfolioFarras.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileAppPortfolioFarras.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8955ED7FABA9A6FCBA1FC9DC /* Pods-MobileAppPortfolioFarras.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAppPortfolioFarras.debug.xcconfig"; path = "Target Support Files/Pods-MobileAppPortfolioFarras/Pods-MobileAppPortfolioFarras.debug.xcconfig"; sourceTree = "<group>"; };
+		A3C982126B7B970B6580D7F8 /* Pods-MobileAppPortfolioFarras.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAppPortfolioFarras.release.xcconfig"; path = "Target Support Files/Pods-MobileAppPortfolioFarras/Pods-MobileAppPortfolioFarras.release.xcconfig"; sourceTree = "<group>"; };
+		B12123276CB86129E363A444 /* Pods-MobileAppPortfolioFarrasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAppPortfolioFarrasTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileAppPortfolioFarrasTests/Pods-MobileAppPortfolioFarrasTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA4CD92D3450BFB5FE27CFF9 /* Pods_MobileAppPortfolioFarras_MobileAppPortfolioFarrasUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileAppPortfolioFarras_MobileAppPortfolioFarrasUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD76D252ABBF1F2007BA34E /* MobileAppPortfolioFarras.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAppPortfolioFarras.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD76D282ABBF1F2007BA34E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD76D2A2ABBF1F2007BA34E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +60,7 @@
 		EDD76D452ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAppPortfolioFarrasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD76D492ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppPortfolioFarrasUITests.swift; sourceTree = "<group>"; };
 		EDD76D4B2ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppPortfolioFarrasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EFCD52133A650E167FCC3C3F /* Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig"; path = "Target Support Files/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC5CDD4BECD3421B2CD063A /* Pods_MobileAppPortfolioFarras.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4432B38F43F60BDD0FEDA213 /* Pods_MobileAppPortfolioFarrasTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD4629064C5940441FC639B /* Pods_MobileAppPortfolioFarras_MobileAppPortfolioFarrasUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7278B997C67C38C3EB9E1860 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				454910B24D477326E2AAC484 /* Pods_MobileAppPortfolioFarras.framework */,
+				EA4CD92D3450BFB5FE27CFF9 /* Pods_MobileAppPortfolioFarras_MobileAppPortfolioFarrasUITests.framework */,
+				1F211D4D9DB44A1C69C12DA7 /* Pods_MobileAppPortfolioFarrasTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EDD76D1C2ABBF1F2007BA34E = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +108,8 @@
 				EDD76D3E2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests */,
 				EDD76D482ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests */,
 				EDD76D262ABBF1F2007BA34E /* Products */,
+				F9CB7561346A529492DAE294 /* Pods */,
+				7278B997C67C38C3EB9E1860 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +154,20 @@
 			path = MobileAppPortfolioFarrasUITests;
 			sourceTree = "<group>";
 		};
+		F9CB7561346A529492DAE294 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8955ED7FABA9A6FCBA1FC9DC /* Pods-MobileAppPortfolioFarras.debug.xcconfig */,
+				A3C982126B7B970B6580D7F8 /* Pods-MobileAppPortfolioFarras.release.xcconfig */,
+				3DCF439DF9FB09658B2D3B62 /* Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.debug.xcconfig */,
+				EFCD52133A650E167FCC3C3F /* Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig */,
+				B12123276CB86129E363A444 /* Pods-MobileAppPortfolioFarrasTests.debug.xcconfig */,
+				35A0A30C3B95ADC13A1489F6 /* Pods-MobileAppPortfolioFarrasTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDD76D4F2ABBF1F4007BA34E /* Build configuration list for PBXNativeTarget "MobileAppPortfolioFarras" */;
 			buildPhases = (
+				E62E1630AB3D23E0996C5DD8 /* [CP] Check Pods Manifest.lock */,
 				EDD76D212ABBF1F2007BA34E /* Sources */,
 				EDD76D222ABBF1F2007BA34E /* Frameworks */,
 				EDD76D232ABBF1F2007BA34E /* Resources */,
+				1A3F95CD3282A7B3203A12DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDD76D522ABBF1F4007BA34E /* Build configuration list for PBXNativeTarget "MobileAppPortfolioFarrasTests" */;
 			buildPhases = (
+				B2FA8F433405D8332EB3AC4E /* [CP] Check Pods Manifest.lock */,
 				EDD76D372ABBF1F4007BA34E /* Sources */,
 				EDD76D382ABBF1F4007BA34E /* Frameworks */,
 				EDD76D392ABBF1F4007BA34E /* Resources */,
@@ -169,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDD76D552ABBF1F4007BA34E /* Build configuration list for PBXNativeTarget "MobileAppPortfolioFarrasUITests" */;
 			buildPhases = (
+				FD2E1B7BD41934F48826AD25 /* [CP] Check Pods Manifest.lock */,
 				EDD76D412ABBF1F4007BA34E /* Sources */,
 				EDD76D422ABBF1F4007BA34E /* Frameworks */,
 				EDD76D432ABBF1F4007BA34E /* Resources */,
+				4D7C039F028F13D547A80AAB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +298,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A3F95CD3282A7B3203A12DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileAppPortfolioFarras/Pods-MobileAppPortfolioFarras-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileAppPortfolioFarras/Pods-MobileAppPortfolioFarras-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MobileAppPortfolioFarras/Pods-MobileAppPortfolioFarras-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D7C039F028F13D547A80AAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2FA8F433405D8332EB3AC4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileAppPortfolioFarrasTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E62E1630AB3D23E0996C5DD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileAppPortfolioFarras-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD2E1B7BD41934F48826AD25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDD76D212ABBF1F2007BA34E /* Sources */ = {
@@ -432,6 +581,7 @@
 		};
 		EDD76D502ABBF1F4007BA34E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8955ED7FABA9A6FCBA1FC9DC /* Pods-MobileAppPortfolioFarras.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +609,7 @@
 		};
 		EDD76D512ABBF1F4007BA34E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3C982126B7B970B6580D7F8 /* Pods-MobileAppPortfolioFarras.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -486,6 +637,7 @@
 		};
 		EDD76D532ABBF1F4007BA34E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12123276CB86129E363A444 /* Pods-MobileAppPortfolioFarrasTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +657,7 @@
 		};
 		EDD76D542ABBF1F4007BA34E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35A0A30C3B95ADC13A1489F6 /* Pods-MobileAppPortfolioFarrasTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +677,7 @@
 		};
 		EDD76D562ABBF1F4007BA34E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DCF439DF9FB09658B2D3B62 /* Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +695,7 @@
 		};
 		EDD76D572ABBF1F4007BA34E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFCD52133A650E167FCC3C3F /* Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
