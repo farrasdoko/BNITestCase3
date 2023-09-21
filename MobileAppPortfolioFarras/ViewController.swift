@@ -73,12 +73,13 @@ struct HistoryTransaction: Codable, Equatable {
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var chartView: PieChartView!
+    @IBOutlet weak var chartView: LineChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupPieChart()
+//        setupPieChart()
+        setupLineChart()
         
         let staticData = """
     [{
@@ -184,6 +185,22 @@ class ViewController: UIViewController {
             }
         }
         
+        let entries: [ChartDataEntry] = ((values[1] as! LineChart).data["month"]!).enumerated().map { (i, yData) in
+            return ChartDataEntry(x: Double(i), y: Double(yData))
+        }
+        
+        let dataSet = LineChartDataSet(entries: entries, label: "Portfolio Data")
+        dataSet.colors = [NSUIColor.blue]
+        
+        let data2 = LineChartData(dataSet: dataSet)
+        
+        data2.setValueFormatter(DefaultValueFormatter(formatter: NumberFormatter()))
+        data2.setValueFont(UIFont.systemFont(ofSize: 12))
+        data2.setValueTextColor(UIColor.black)
+        
+        chartView.data = data2
+        
+        /*
         let entries: [PieChartDataEntry] = (values[0] as! DonutChart).data.map { data in
             return PieChartDataEntry(value: Double(data.percentage) ?? 0, label: data.label)
         }
@@ -199,11 +216,20 @@ class ViewController: UIViewController {
         data2.setValueTextColor(UIColor.black)
         
         chartView.data = data2
+        */
     }
-    func setupPieChart() {
-        chartView.holeRadiusPercent = 0.1
-        chartView.chartDescription.enabled = true
+//    func setupPieChart() {
+//        chartView.holeRadiusPercent = 0.1
+//        chartView.chartDescription.enabled = true
+//        chartView.noDataText = "No data available"
+//        chartView.chartDescription.text = "Portfolio Chart"
+//    }
+    func setupLineChart() {
         chartView.noDataText = "No data available"
         chartView.chartDescription.text = "Portfolio Chart"
+        chartView.chartDescription.enabled = true
+        chartView.dragEnabled = true
+        chartView.setScaleEnabled(true)
+        chartView.pinchZoomEnabled = true
     }
 }
