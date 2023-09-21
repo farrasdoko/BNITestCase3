@@ -16,6 +16,8 @@
 		EDD76D322ABBF1F4007BA34E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD76D312ABBF1F4007BA34E /* Assets.xcassets */; };
 		EDD76D352ABBF1F4007BA34E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD76D332ABBF1F4007BA34E /* LaunchScreen.storyboard */; };
 		EDD76D402ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D3F2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift */; };
+		EDD76D5A2ABC44DC007BA34E /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D592ABC44DC007BA34E /* PieChartCell.swift */; };
+		EDD76D5C2ABC44EA007BA34E /* LineChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D5B2ABC44EA007BA34E /* LineChartCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		EDD76D362ABBF1F4007BA34E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDD76D3B2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAppPortfolioFarrasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD76D3F2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppPortfolioFarrasTests.swift; sourceTree = "<group>"; };
+		EDD76D592ABC44DC007BA34E /* PieChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
+		EDD76D5B2ABC44EA007BA34E /* LineChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartCell.swift; sourceTree = "<group>"; };
 		EFCD52133A650E167FCC3C3F /* Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig"; path = "Target Support Files/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +107,7 @@
 		EDD76D272ABBF1F2007BA34E /* MobileAppPortfolioFarras */ = {
 			isa = PBXGroup;
 			children = (
+				EDD76D582ABC44B7007BA34E /* Cells */,
 				EDD76D282ABBF1F2007BA34E /* AppDelegate.swift */,
 				EDD76D2A2ABBF1F2007BA34E /* SceneDelegate.swift */,
 				EDD76D2C2ABBF1F2007BA34E /* ViewController.swift */,
@@ -120,6 +125,15 @@
 				EDD76D3F2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift */,
 			);
 			path = MobileAppPortfolioFarrasTests;
+			sourceTree = "<group>";
+		};
+		EDD76D582ABC44B7007BA34E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76D592ABC44DC007BA34E /* PieChartCell.swift */,
+				EDD76D5B2ABC44EA007BA34E /* LineChartCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F9CB7561346A529492DAE294 /* Pods */ = {
@@ -304,8 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD76D2D2ABBF1F2007BA34E /* ViewController.swift in Sources */,
+				EDD76D5A2ABC44DC007BA34E /* PieChartCell.swift in Sources */,
 				EDD76D292ABBF1F2007BA34E /* AppDelegate.swift in Sources */,
 				EDD76D2B2ABBF1F2007BA34E /* SceneDelegate.swift in Sources */,
+				EDD76D5C2ABC44EA007BA34E /* LineChartCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

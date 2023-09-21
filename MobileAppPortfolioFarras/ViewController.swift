@@ -73,14 +73,14 @@ struct HistoryTransaction: Codable, Equatable {
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var chartView: LineChartView!
+    @IBOutlet weak var tableView: UITableView!
+    var chartData: [Any] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        setupPieChart()
-        setupLineChart()
-        
+        setupTableView()
+        // *
         let staticData = """
     [{
         "type": "donutChart",
@@ -177,59 +177,79 @@ class ViewController: UIViewController {
             print("Error serializing NSDictionary: \(error)")
         }
         
-        for value in values {
-            if let donutValue = value as? DonutChart {
-                // TODO: operate donutValue
-            } else if let lineValue = value as? LineChart {
-                // TODO: operate lineValue
-            }
-        }
+        self.chartData = values
+        tableView.reloadData()
         
-        let entries: [ChartDataEntry] = ((values[1] as! LineChart).data["month"]!).enumerated().map { (i, yData) in
-            return ChartDataEntry(x: Double(i), y: Double(yData))
-        }
+//        for value in values {
+//            if let donutValue = value as? DonutChart {
+//                // TODO: operate donutValue
+//            } else if let lineValue = value as? LineChart {
+//                // TODO: operate lineValue
+//            }
+//        }
         
-        let dataSet = LineChartDataSet(entries: entries, label: "Portfolio Data")
-        dataSet.colors = [NSUIColor.blue]
-        
-        let data2 = LineChartData(dataSet: dataSet)
-        
-        data2.setValueFormatter(DefaultValueFormatter(formatter: NumberFormatter()))
-        data2.setValueFont(UIFont.systemFont(ofSize: 12))
-        data2.setValueTextColor(UIColor.black)
-        
-        chartView.data = data2
-        
-        /*
-        let entries: [PieChartDataEntry] = (values[0] as! DonutChart).data.map { data in
-            return PieChartDataEntry(value: Double(data.percentage) ?? 0, label: data.label)
-        }
-        
-        let dataSet = PieChartDataSet(entries: entries, label: "-")
-        dataSet.colors = ChartColorTemplates.material()
-        
-        let data2 = PieChartData(dataSet: dataSet)
-        
-        // Optionally, add value formatting and styling here
-        data2.setValueFormatter(DefaultValueFormatter(formatter: NumberFormatter()))
-        data2.setValueFont(UIFont.systemFont(ofSize: 12))
-        data2.setValueTextColor(UIColor.black)
-        
-        chartView.data = data2
-        */
+        //*/
     }
-//    func setupPieChart() {
-//        chartView.holeRadiusPercent = 0.1
-//        chartView.chartDescription.enabled = true
-//        chartView.noDataText = "No data available"
-//        chartView.chartDescription.text = "Portfolio Chart"
-//    }
-    func setupLineChart() {
-        chartView.noDataText = "No data available"
-        chartView.chartDescription.text = "Portfolio Chart"
-        chartView.chartDescription.enabled = true
-        chartView.dragEnabled = true
-        chartView.setScaleEnabled(true)
-        chartView.pinchZoomEnabled = true
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+//        tableView.register(PieChartCell.self, forCellReuseIdentifier: PieChartCell.reuseIdentifier)
+//        tableView.register(LineChartCell.self, forCellReuseIdentifier: LineChartCell.reuseIdentifier)
+    }
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        chartData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let value = chartData[indexPath.row]
+        if let donutValue = value as? DonutChart {
+            let cell = tableView.dequeueReusableCell(withIdentifier: PieChartCell.reuseIdentifier)! as! PieChartCell
+            
+            let entries: [PieChartDataEntry] = donutValue.data.map { data in
+                return PieChartDataEntry(value: Double(data.percentage) ?? 0, label: data.label)
+            }
+            
+            let dataSet = PieChartDataSet(entries: entries, label: "Portfolio Chart")
+            dataSet.colors = ChartColorTemplates.material()
+            
+            let data = PieChartData(dataSet: dataSet)
+            
+            data.setValueFormatter(DefaultValueFormatter(formatter: NumberFormatter()))
+            data.setValueFont(UIFont.systemFont(ofSize: 12))
+            data.setValueTextColor(UIColor.black)
+            
+            cell.chartView.data = data
+            
+            return cell
+        } else if let lineValue = value as? LineChart {
+            let cell = tableView.dequeueReusableCell(withIdentifier: LineChartCell.reuseIdentifier)! as! LineChartCell
+            
+            let entries: [ChartDataEntry] = lineValue.data["month"]!.enumerated().map { (i, yData) in
+                return ChartDataEntry(x: Double(i), y: Double(yData))
+            }
+            
+            let dataSet = LineChartDataSet(entries: entries, label: "Portfolio Data")
+            dataSet.colors = [NSUIColor.blue]
+            
+            let data = LineChartData(dataSet: dataSet)
+            
+            data.setValueFormatter(DefaultValueFormatter(formatter: NumberFormatter()))
+            data.setValueFont(UIFont.systemFont(ofSize: 12))
+            data.setValueTextColor(UIColor.black)
+            
+            cell.chartView.data = data
+            
+            return cell
+        } else {
+            fatalError("Type is undefined")
+        }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
