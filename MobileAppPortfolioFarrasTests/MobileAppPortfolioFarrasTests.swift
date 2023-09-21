@@ -8,6 +8,16 @@
 import XCTest
 @testable import MobileAppPortfolioFarras
 
+struct LineChart: Codable {
+    let type: String
+    let data: [String: [Int]]
+    
+    enum CodingKeys: String, CodingKey {
+        case type
+        case data
+    }
+}
+
 final class MobileAppPortfolioFarrasTests: XCTestCase {
     
     override class func setUp() {
@@ -63,6 +73,41 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
             }
         } else {
             // XCTFail("Invalid JSON string", file: file, line: line)
+            return nil
+        }
+    }
+    func testLineChartData_Error() {
+        let lineChart = """
+            {}
+        """
+        
+        let sut = decodeJson(from: lineChart)
+        XCTAssertNil(sut, "No value associated with key ...")
+    }
+    func testLineChartData_Success() {
+        let lineChart = """
+            {
+                "type": "lineChart",
+                "data": {
+                    "month": [3, 7, 8, 10, 5, 10, 1, 3, 5, 10, 7, 7]
+                }
+            }
+        """
+        
+        let sut = decodeJson(from: lineChart)
+        XCTAssertEqual(sut?.type, "lineChart")
+        XCTAssertEqual(sut?.data, ["month": [3, 7, 8, 10, 5, 10, 1, 3, 5, 10, 7, 7]] )
+    }
+    
+    private func decodeJson(from str: String, file: StaticString = #filePath, line: UInt = #line) -> LineChart? {
+        if let jsonData = str.data(using: .utf8) {
+            do {
+                return try JSONDecoder().decode(LineChart.self, from: jsonData)
+            } catch {
+//                print("Error: \(error)")
+                return nil
+            }
+        } else {
             return nil
         }
     }
