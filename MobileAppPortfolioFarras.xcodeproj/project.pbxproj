@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDD76D292ABBF1F2007BA34E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D282ABBF1F2007BA34E /* AppDelegate.swift */; };
+		EDD76D2B2ABBF1F2007BA34E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D2A2ABBF1F2007BA34E /* SceneDelegate.swift */; };
+		EDD76D2D2ABBF1F2007BA34E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D2C2ABBF1F2007BA34E /* ViewController.swift */; };
+		EDD76D302ABBF1F2007BA34E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD76D2E2ABBF1F2007BA34E /* Main.storyboard */; };
+		EDD76D322ABBF1F4007BA34E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD76D312ABBF1F4007BA34E /* Assets.xcassets */; };
+		EDD76D352ABBF1F4007BA34E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD76D332ABBF1F4007BA34E /* LaunchScreen.storyboard */; };
+		EDD76D402ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D3F2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift */; };
+		EDD76D4A2ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D492ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests.swift */; };
+		EDD76D4C2ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D4B2ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDD76D3C2ABBF1F4007BA34E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDD76D1D2ABBF1F2007BA34E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDD76D242ABBF1F2007BA34E;
+			remoteInfo = MobileAppPortfolioFarras;
+		};
+		EDD76D462ABBF1F4007BA34E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDD76D1D2ABBF1F2007BA34E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDD76D242ABBF1F2007BA34E;
+			remoteInfo = MobileAppPortfolioFarras;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EDD76D252ABBF1F2007BA34E /* MobileAppPortfolioFarras.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAppPortfolioFarras.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD76D282ABBF1F2007BA34E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDD76D2A2ABBF1F2007BA34E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EDD76D2C2ABBF1F2007BA34E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDD76D2F2ABBF1F2007BA34E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDD76D312ABBF1F4007BA34E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDD76D342ABBF1F4007BA34E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDD76D362ABBF1F4007BA34E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDD76D3B2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAppPortfolioFarrasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD76D3F2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppPortfolioFarrasTests.swift; sourceTree = "<group>"; };
+		EDD76D452ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAppPortfolioFarrasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD76D492ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppPortfolioFarrasUITests.swift; sourceTree = "<group>"; };
+		EDD76D4B2ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppPortfolioFarrasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDD76D222ABBF1F2007BA34E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD76D382ABBF1F4007BA34E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD76D422ABBF1F4007BA34E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDD76D1C2ABBF1F2007BA34E = {
+			isa = PBXGroup;
+			children = (
+				EDD76D272ABBF1F2007BA34E /* MobileAppPortfolioFarras */,
+				EDD76D3E2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests */,
+				EDD76D482ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests */,
+				EDD76D262ABBF1F2007BA34E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDD76D262ABBF1F2007BA34E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76D252ABBF1F2007BA34E /* MobileAppPortfolioFarras.app */,
+				EDD76D3B2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.xctest */,
+				EDD76D452ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDD76D272ABBF1F2007BA34E /* MobileAppPortfolioFarras */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76D282ABBF1F2007BA34E /* AppDelegate.swift */,
+				EDD76D2A2ABBF1F2007BA34E /* SceneDelegate.swift */,
+				EDD76D2C2ABBF1F2007BA34E /* ViewController.swift */,
+				EDD76D2E2ABBF1F2007BA34E /* Main.storyboard */,
+				EDD76D312ABBF1F4007BA34E /* Assets.xcassets */,
+				EDD76D332ABBF1F4007BA34E /* LaunchScreen.storyboard */,
+				EDD76D362ABBF1F4007BA34E /* Info.plist */,
+			);
+			path = MobileAppPortfolioFarras;
+			sourceTree = "<group>";
+		};
+		EDD76D3E2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76D3F2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift */,
+			);
+			path = MobileAppPortfolioFarrasTests;
+			sourceTree = "<group>";
+		};
+		EDD76D482ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76D492ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests.swift */,
+				EDD76D4B2ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITestsLaunchTests.swift */,
+			);
+			path = MobileAppPortfolioFarrasUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDD76D242ABBF1F2007BA34E /* MobileAppPortfolioFarras */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDD76D4F2ABBF1F4007BA34E /* Build configuration list for PBXNativeTarget "MobileAppPortfolioFarras" */;
+			buildPhases = (
+				EDD76D212ABBF1F2007BA34E /* Sources */,
+				EDD76D222ABBF1F2007BA34E /* Frameworks */,
+				EDD76D232ABBF1F2007BA34E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileAppPortfolioFarras;
+			productName = MobileAppPortfolioFarras;
+			productReference = EDD76D252ABBF1F2007BA34E /* MobileAppPortfolioFarras.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDD76D3A2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDD76D522ABBF1F4007BA34E /* Build configuration list for PBXNativeTarget "MobileAppPortfolioFarrasTests" */;
+			buildPhases = (
+				EDD76D372ABBF1F4007BA34E /* Sources */,
+				EDD76D382ABBF1F4007BA34E /* Frameworks */,
+				EDD76D392ABBF1F4007BA34E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDD76D3D2ABBF1F4007BA34E /* PBXTargetDependency */,
+			);
+			name = MobileAppPortfolioFarrasTests;
+			productName = MobileAppPortfolioFarrasTests;
+			productReference = EDD76D3B2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDD76D442ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDD76D552ABBF1F4007BA34E /* Build configuration list for PBXNativeTarget "MobileAppPortfolioFarrasUITests" */;
+			buildPhases = (
+				EDD76D412ABBF1F4007BA34E /* Sources */,
+				EDD76D422ABBF1F4007BA34E /* Frameworks */,
+				EDD76D432ABBF1F4007BA34E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDD76D472ABBF1F4007BA34E /* PBXTargetDependency */,
+			);
+			name = MobileAppPortfolioFarrasUITests;
+			productName = MobileAppPortfolioFarrasUITests;
+			productReference = EDD76D452ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDD76D1D2ABBF1F2007BA34E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					EDD76D242ABBF1F2007BA34E = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					EDD76D3A2ABBF1F4007BA34E = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = EDD76D242ABBF1F2007BA34E;
+					};
+					EDD76D442ABBF1F4007BA34E = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = EDD76D242ABBF1F2007BA34E;
+					};
+				};
+			};
+			buildConfigurationList = EDD76D202ABBF1F2007BA34E /* Build configuration list for PBXProject "MobileAppPortfolioFarras" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDD76D1C2ABBF1F2007BA34E;
+			productRefGroup = EDD76D262ABBF1F2007BA34E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDD76D242ABBF1F2007BA34E /* MobileAppPortfolioFarras */,
+				EDD76D3A2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests */,
+				EDD76D442ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDD76D232ABBF1F2007BA34E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD76D352ABBF1F4007BA34E /* LaunchScreen.storyboard in Resources */,
+				EDD76D322ABBF1F4007BA34E /* Assets.xcassets in Resources */,
+				EDD76D302ABBF1F2007BA34E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD76D392ABBF1F4007BA34E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD76D432ABBF1F4007BA34E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDD76D212ABBF1F2007BA34E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD76D2D2ABBF1F2007BA34E /* ViewController.swift in Sources */,
+				EDD76D292ABBF1F2007BA34E /* AppDelegate.swift in Sources */,
+				EDD76D2B2ABBF1F2007BA34E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD76D372ABBF1F4007BA34E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD76D402ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD76D412ABBF1F4007BA34E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD76D4C2ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITestsLaunchTests.swift in Sources */,
+				EDD76D4A2ABBF1F4007BA34E /* MobileAppPortfolioFarrasUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDD76D3D2ABBF1F4007BA34E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDD76D242ABBF1F2007BA34E /* MobileAppPortfolioFarras */;
+			targetProxy = EDD76D3C2ABBF1F4007BA34E /* PBXContainerItemProxy */;
+		};
+		EDD76D472ABBF1F4007BA34E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDD76D242ABBF1F2007BA34E /* MobileAppPortfolioFarras */;
+			targetProxy = EDD76D462ABBF1F4007BA34E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDD76D2E2ABBF1F2007BA34E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDD76D2F2ABBF1F2007BA34E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EDD76D332ABBF1F4007BA34E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDD76D342ABBF1F4007BA34E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDD76D4D2ABBF1F4007BA34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDD76D4E2ABBF1F4007BA34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDD76D502ABBF1F4007BA34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MobileAppPortfolioFarras/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farras.MobileAppPortfolioFarras;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDD76D512ABBF1F4007BA34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MobileAppPortfolioFarras/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farras.MobileAppPortfolioFarras;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EDD76D532ABBF1F4007BA34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farras.MobileAppPortfolioFarrasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileAppPortfolioFarras.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MobileAppPortfolioFarras";
+			};
+			name = Debug;
+		};
+		EDD76D542ABBF1F4007BA34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farras.MobileAppPortfolioFarrasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileAppPortfolioFarras.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MobileAppPortfolioFarras";
+			};
+			name = Release;
+		};
+		EDD76D562ABBF1F4007BA34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farras.MobileAppPortfolioFarrasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobileAppPortfolioFarras;
+			};
+			name = Debug;
+		};
+		EDD76D572ABBF1F4007BA34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farras.MobileAppPortfolioFarrasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobileAppPortfolioFarras;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDD76D202ABBF1F2007BA34E /* Build configuration list for PBXProject "MobileAppPortfolioFarras" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDD76D4D2ABBF1F4007BA34E /* Debug */,
+				EDD76D4E2ABBF1F4007BA34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDD76D4F2ABBF1F4007BA34E /* Build configuration list for PBXNativeTarget "MobileAppPortfolioFarras" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDD76D502ABBF1F4007BA34E /* Debug */,
+				EDD76D512ABBF1F4007BA34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDD76D522ABBF1F4007BA34E /* Build configuration list for PBXNativeTarget "MobileAppPortfolioFarrasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDD76D532ABBF1F4007BA34E /* Debug */,
+				EDD76D542ABBF1F4007BA34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDD76D552ABBF1F4007BA34E /* Build configuration list for PBXNativeTarget "MobileAppPortfolioFarrasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDD76D562ABBF1F4007BA34E /* Debug */,
+				EDD76D572ABBF1F4007BA34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDD76D1D2ABBF1F2007BA34E /* Project object */;
+}
