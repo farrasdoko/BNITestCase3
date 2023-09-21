@@ -18,6 +18,16 @@ struct LineChart: Codable {
     }
 }
 
+struct DonutChart: Codable {
+    let type: String
+    let data: [DonutChartData]
+}
+
+struct DonutChartData: Codable, Equatable {
+    let label: String
+    let percentage: String
+}
+
 final class MobileAppPortfolioFarrasTests: XCTestCase {
     
     override class func setUp() {
@@ -76,12 +86,12 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
             return nil
         }
     }
-    func testLineChartData_Error() {
+    func testDecodeJson_Error() {
         let lineChart = """
             {}
         """
         
-        let sut = decodeJson(from: lineChart)
+        let sut: LineChart? = decodeJson(from: lineChart)
         XCTAssertNil(sut, "No value associated with key ...")
     }
     func testLineChartData_Success() {
@@ -94,15 +104,90 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
             }
         """
         
-        let sut = decodeJson(from: lineChart)
+        let sut: LineChart? = decodeJson(from: lineChart)
         XCTAssertEqual(sut?.type, "lineChart")
         XCTAssertEqual(sut?.data, ["month": [3, 7, 8, 10, 5, 10, 1, 3, 5, 10, 7, 7]] )
     }
     
-    private func decodeJson(from str: String, file: StaticString = #filePath, line: UInt = #line) -> LineChart? {
+    func testDonutChartData() {
+        let donutChart = """
+            {
+                    "type": "donutChart",
+                    "data": [{
+                            "label": "Tarik Tunai",
+                            "percentage": "55",
+                            "data": [{
+                                "trx_date": "21/01/2023",
+                                "nominal": 1000000
+                            }, {
+                                "trx_date": "20/01/2023",
+                                "nominal": 500000
+                            }, {
+                                "trx_date": "19/01/2023",
+                                "nominal": 1000000
+                            }]
+                        },
+                        {
+                            "label": "QRIS Payment",
+                            "percentage": "31",
+                            "data": [{
+                                "trx_date": "21/01/2023",
+                                "nominal": 159000
+                            }, {
+                                "trx_date": "20/01/2023",
+                                "nominal": 35000
+                            }, {
+                                "trx_date": "19/01/2023",
+                                "nominal": 1500
+                            }]
+                        },
+                        {
+                            "label": "Topup Gopay",
+                            "percentage": "7.7",
+                            "data": [{
+                                "trx_date": "21/01/2023",
+                                "nominal": 200000
+                            }, {
+                                "trx_date": "20/01/2023",
+                                "nominal": 195000
+                            }, {
+                                "trx_date": "19/01/2023",
+                                "nominal": 5000000
+                            }]
+                        },
+                        {
+                            "label": "Lainnya",
+                            "percentage": "6.3",
+                            "data": [{
+                                "trx_date": "21/01/2023",
+                                "nominal": 1000000
+                            }, {
+                                "trx_date": "20/01/2023",
+                                "nominal": 500000
+                            }, {
+                                "trx_date": "19/01/2023",
+                                "nominal": 1000000
+                            }]
+                        }
+                    ]
+                }
+        """
+        
+        let sut: DonutChart? = decodeJson(from: donutChart)
+        let typeExpectation = [
+            DonutChartData(label: "Tarik Tunai", percentage: "55"),
+            DonutChartData(label: "QRIS Payment", percentage: "31"),
+            DonutChartData(label: "Topup Gopay", percentage: "7.7"),
+            DonutChartData(label: "Lainnya", percentage: "6.3")
+        ]
+        XCTAssertEqual(sut?.type, "donutChart")
+        XCTAssertEqual(sut?.data, typeExpectation)
+    }
+    
+    private func decodeJson<T: Codable>(from str: String, file: StaticString = #filePath, line: UInt = #line) -> T? {
         if let jsonData = str.data(using: .utf8) {
             do {
-                return try JSONDecoder().decode(LineChart.self, from: jsonData)
+                return try JSONDecoder().decode(T.self, from: jsonData)
             } catch {
 //                print("Error: \(error)")
                 return nil
