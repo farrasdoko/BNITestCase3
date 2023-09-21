@@ -1,0 +1,83 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
+*.moved-aside
+*.mode1
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.pyc
+*.suo
+*.user
+*.xcuserstate
+
+## Xcode Patch
+*.swp
+
+## Auto-generated schemes, classes, and Xcode metadata files
+*.schemacheckout
+*.xcscheme
+*.xcworkspace
+*.xcuserdatad
+*.xcproject
+*.idea/
+
+## AppCode
+.idea/
+
+## CocoaPods
+Pods/
+# Add this line if you want to ignore the xcworkspace file
+# *.xcworkspace
+
+# Carthage
+/Carthage/Checkouts
+/Carthage/Build
+
+# fastlane
+/fastlane/report.xml
+/fastlane/Preview.html
+/fastlane/screenshots
+/fastlane/test_output
+
+# Code Injection
+/codeinjection/
+
+# Compiled Source
+# .com.apple.swiftpm
+.build/
+
+# Module directory
+.Python
+
+# CMake
+CMakeLists.txt.user
+CMakeScripts/
+CMakeCache.txt
+
+# Crashlytics
+crashlytics/
+crashlytics-build.properties
+
+# old skool: .DS_Store
+.DS_Store
+
+# Xcode
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xccheckout
+*.xcuserdatad
+
