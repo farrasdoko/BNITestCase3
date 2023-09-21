@@ -8,7 +8,7 @@
 import XCTest
 @testable import MobileAppPortfolioFarras
 
-struct LineChart: Codable {
+struct LineChart: Codable, Equatable {
     let type: String
     let data: [String: [Int]]
     
@@ -18,7 +18,7 @@ struct LineChart: Codable {
     }
 }
 
-struct DonutChart: Codable {
+struct DonutChart: Codable, Equatable {
     let type: String
     let data: [DonutChartData]
 }
@@ -184,14 +184,125 @@ final class MobileAppPortfolioFarrasTests: XCTestCase {
         XCTAssertEqual(sut?.data, typeExpectation)
     }
     
+    func testStaticData() {
+        let staticData = """
+    [{
+        "type": "donutChart",
+        "data": [{
+                "label": "Tarik Tunai",
+                "percentage": "55",
+                "data": [{
+                    "trx_date": "21/01/2023",
+                    "nominal": 1000000
+                }, {
+                    "trx_date": "20/01/2023",
+                    "nominal": 500000
+                }, {
+                    "trx_date": "19/01/2023",
+                    "nominal": 1000000
+                }]
+            },
+            {
+                "label": "QRIS Payment",
+                "percentage": "31",
+                "data": [{
+                    "trx_date": "21/01/2023",
+                    "nominal": 159000
+                }, {
+                    "trx_date": "20/01/2023",
+                    "nominal": 35000
+                }, {
+                    "trx_date": "19/01/2023",
+                    "nominal": 1500
+                }]
+            },
+            {
+                "label": "Topup Gopay",
+                "percentage": "7.7",
+                "data": [{
+                    "trx_date": "21/01/2023",
+                    "nominal": 200000
+                }, {
+                    "trx_date": "20/01/2023",
+                    "nominal": 195000
+                }, {
+                    "trx_date": "19/01/2023",
+                    "nominal": 5000000
+                }]
+            },
+            {
+                "label": "Lainnya",
+                "percentage": "6.3",
+                "data": [{
+                    "trx_date": "21/01/2023",
+                    "nominal": 1000000
+                }, {
+                    "trx_date": "20/01/2023",
+                    "nominal": 500000
+                }, {
+                    "trx_date": "19/01/2023",
+                    "nominal": 1000000
+                }]
+            }
+        ]
+    },
+    {
+        "type": "lineChart",
+        "data": {
+            "month": [3, 7, 8, 10, 5, 10, 1, 3, 5, 10, 7, 7]
+        }
+    }
+    ]
+    """
+        let data: [NSDictionary]? = serializeStringToAny(from: staticData)
+        guard let data = data else {
+            XCTFail("Data can't be nil")
+            return
+        }
+        
+        var sut: [Any] = []
+        
+        do {
+            for element in data {
+                let jsonData = try JSONSerialization.data(withJSONObject: element, options: [])
+                
+                if let donutValue: DonutChart = decodeJson(from: jsonData) {
+                    sut.append(donutValue)
+                    print("123: - Donat value: \(donutValue)")
+                } else if let lineValue: LineChart = decodeJson(from: jsonData) {
+                    sut.append(lineValue)
+                    print("123: - Line value: \(lineValue)")
+                } else {
+                    XCTFail("Unknown type: \(type(of: element))")
+                    XCTFail("It is: \(element))")
+                }
+            }
+        } catch {
+            print("Error serializing NSDictionary: \(error)")
+        }
+        
+        XCTAssertEqual(sut.count, 2)
+        XCTAssertEqual(sut[0] as? DonutChart, DonutChart(type: "donutChart", data: [
+            DonutChartData(label: "Tarik Tunai", percentage: "55"),
+            DonutChartData(label: "QRIS Payment", percentage: "31"),
+            DonutChartData(label: "Topup Gopay", percentage: "7.7"),
+            DonutChartData(label: "Lainnya", percentage: "6.3"),
+        ]))
+        XCTAssertEqual(sut[1] as? LineChart, LineChart(type: "lineChart", data: [
+            "month": [3, 7, 8, 10, 5, 10, 1, 3, 5, 10, 7, 7]
+        ]))
+    }
+    private func decodeJson<T: Codable>(from data: Data, file: StaticString = #filePath, line: UInt = #line) -> T? {
+        do {
+            return try JSONDecoder().decode(T.self, from: data)
+        } catch {
+//            print("Error: \(error)")
+            return nil
+        }
+    }
     private func decodeJson<T: Codable>(from str: String, file: StaticString = #filePath, line: UInt = #line) -> T? {
         if let jsonData = str.data(using: .utf8) {
-            do {
-                return try JSONDecoder().decode(T.self, from: jsonData)
-            } catch {
-//                print("Error: \(error)")
-                return nil
-            }
+            return decodeJson(from: jsonData, file: file, line: line)
         } else {
             return nil
         }
