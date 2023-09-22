@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         presenter?.viewDidLoad()
     }
     
+    var highlightIndexPath: IndexPath? = nil
+    
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -47,7 +49,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: PieChartCell.reuseIdentifier)! as! PieChartCell
             
             let entries: [PieChartDataEntry] = donutValue.data.map { data in
-                return PieChartDataEntry(value: Double(data.percentage) ?? 0, label: data.label)
+                return PieChartDataEntry(value: Double(data.percentage) ?? 0, label: data.label, data: data)
             }
             
             let dataSet = PieChartDataSet(entries: entries, label: "Portfolio Chart")
@@ -60,6 +62,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             data.setValueTextColor(UIColor.black)
             
             cell.chartView.data = data
+            
+            cell.chartView.delegate = self
             
             return cell
         } else if let lineValue = value as? LineChart {
@@ -94,5 +98,12 @@ extension ViewController: ViewViewProtocol {
     func showChartData(chart: [Any]) {
         self.chartData = chart
         tableView.reloadData()
+    }
+}
+
+extension ViewController: ChartViewDelegate {
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        guard let data = entry.data as? DonutChartData else { return }
+        presenter?.showHistoryTransactionScreen(from: navigationController, data: data)
     }
 }

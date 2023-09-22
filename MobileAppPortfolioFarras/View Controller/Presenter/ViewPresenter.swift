@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ViewPresenterProtocol: AnyObject {
     var view: ViewViewProtocol? { get set }
@@ -14,6 +15,7 @@ protocol ViewPresenterProtocol: AnyObject {
     
     // MARK: View to Presenter
     func viewDidLoad()
+    func showHistoryTransactionScreen(from nav: UINavigationController?, data: DonutChartData)
     
     // MARK: Interactor to Presenter
     func updateChartData(chart: [Any])
@@ -30,5 +32,9 @@ class ViewPresenter: ViewPresenterProtocol {
     
     func updateChartData(chart: [Any]) {
         view?.showChartData(chart: chart)
+    }
+    
+    func showHistoryTransactionScreen(from nav: UINavigationController?, data: DonutChartData) {
+        router?.navigateToHistoryTransaction(from: nav, data: data)
     }
 }

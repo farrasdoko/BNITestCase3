@@ -26,6 +26,11 @@
 		EDFCDFC22ABD10D000C366C2 /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFC12ABD10D000C366C2 /* DonutChart.swift */; };
 		EDFCDFC42ABD10E300C366C2 /* DonutChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFC32ABD10E300C366C2 /* DonutChartData.swift */; };
 		EDFCDFC62ABD10F600C366C2 /* HistoryTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFC52ABD10F600C366C2 /* HistoryTransaction.swift */; };
+		EDFCDFC92ABD173000C366C2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFC82ABD173000C366C2 /* TableViewController.swift */; };
+		EDFCDFD12ABD17E900C366C2 /* TableViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFD02ABD17E900C366C2 /* TableViewRouter.swift */; };
+		EDFCDFD32ABD1C8E00C366C2 /* TableViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFD22ABD1C8E00C366C2 /* TableViewInteractor.swift */; };
+		EDFCDFD52ABD1C9B00C366C2 /* TableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFD42ABD1C9B00C366C2 /* TableViewPresenter.swift */; };
+		EDFCDFD82ABD1EE000C366C2 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFD72ABD1EE000C366C2 /* Int+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		EDFCDFC12ABD10D000C366C2 /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
 		EDFCDFC32ABD10E300C366C2 /* DonutChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartData.swift; sourceTree = "<group>"; };
 		EDFCDFC52ABD10F600C366C2 /* HistoryTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransaction.swift; sourceTree = "<group>"; };
+		EDFCDFC82ABD173000C366C2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		EDFCDFD02ABD17E900C366C2 /* TableViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRouter.swift; sourceTree = "<group>"; };
+		EDFCDFD22ABD1C8E00C366C2 /* TableViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewInteractor.swift; sourceTree = "<group>"; };
+		EDFCDFD42ABD1C9B00C366C2 /* TableViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewPresenter.swift; sourceTree = "<group>"; };
+		EDFCDFD72ABD1EE000C366C2 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		EFCD52133A650E167FCC3C3F /* Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig"; path = "Target Support Files/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +133,8 @@
 		EDD76D272ABBF1F2007BA34E /* MobileAppPortfolioFarras */ = {
 			isa = PBXGroup;
 			children = (
+				EDFCDFD62ABD1ED000C366C2 /* Extensions */,
+				EDFCDFC72ABD171500C366C2 /* DetailVc */,
 				EDFCDFB52ABD0E9A00C366C2 /* Helper */,
 				EDFCDFAF2ABD0E4500C366C2 /* View Controller */,
 				EDD76D282ABBF1F2007BA34E /* AppDelegate.swift */,
@@ -214,6 +226,65 @@
 				EDFCDFB62ABD0EA400C366C2 /* BNIHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		EDFCDFC72ABD171500C366C2 /* DetailVc */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFCE2ABD17CD00C366C2 /* Router */,
+				EDFCDFCD2ABD17C900C366C2 /* Entity */,
+				EDFCDFCC2ABD17C300C366C2 /* Presenter */,
+				EDFCDFCB2ABD17BE00C366C2 /* Interactor */,
+				EDFCDFCA2ABD17B900C366C2 /* View */,
+			);
+			path = DetailVc;
+			sourceTree = "<group>";
+		};
+		EDFCDFCA2ABD17B900C366C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFC82ABD173000C366C2 /* TableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDFCDFCB2ABD17BE00C366C2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFD22ABD1C8E00C366C2 /* TableViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EDFCDFCC2ABD17C300C366C2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFD42ABD1C9B00C366C2 /* TableViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EDFCDFCD2ABD17C900C366C2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EDFCDFCE2ABD17CD00C366C2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFD02ABD17E900C366C2 /* TableViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EDFCDFD62ABD1ED000C366C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFD72ABD1EE000C366C2 /* Int+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F9CB7561346A529492DAE294 /* Pods */ = {
@@ -398,16 +469,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD76D2D2ABBF1F2007BA34E /* ViewController.swift in Sources */,
+				EDFCDFC92ABD173000C366C2 /* TableViewController.swift in Sources */,
+				EDFCDFD32ABD1C8E00C366C2 /* TableViewInteractor.swift in Sources */,
+				EDFCDFD82ABD1EE000C366C2 /* Int+Extensions.swift in Sources */,
 				EDFCDFB72ABD0EA400C366C2 /* BNIHelper.swift in Sources */,
 				EDFCDFBE2ABD0F3400C366C2 /* ViewRouter.swift in Sources */,
 				EDFCDFBA2ABD0F1D00C366C2 /* ViewPresenter.swift in Sources */,
 				EDFCDFC02ABD10BA00C366C2 /* LineChart.swift in Sources */,
 				EDFCDFC42ABD10E300C366C2 /* DonutChartData.swift in Sources */,
+				EDFCDFD52ABD1C9B00C366C2 /* TableViewPresenter.swift in Sources */,
 				EDD76D5A2ABC44DC007BA34E /* PieChartCell.swift in Sources */,
 				EDD76D292ABBF1F2007BA34E /* AppDelegate.swift in Sources */,
 				EDFCDFC62ABD10F600C366C2 /* HistoryTransaction.swift in Sources */,
 				EDD76D2B2ABBF1F2007BA34E /* SceneDelegate.swift in Sources */,
 				EDD76D5C2ABC44EA007BA34E /* LineChartCell.swift in Sources */,
+				EDFCDFD12ABD17E900C366C2 /* TableViewRouter.swift in Sources */,
 				EDFCDFC22ABD10D000C366C2 /* DonutChart.swift in Sources */,
 				EDFCDFBC2ABD0F2800C366C2 /* ViewInteractor.swift in Sources */,
 			);

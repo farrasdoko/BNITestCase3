@@ -10,7 +10,7 @@ import UIKit
 
 protocol ViewRouterProtocol: AnyObject {
     static func createModule() -> UIViewController
-//    func pushToQRScreen(from vc: UIViewController?)
+    func navigateToHistoryTransaction(from nav: UINavigationController?, data: DonutChartData)
 }
 
 class ViewRouter: ViewRouterProtocol {
@@ -35,10 +35,8 @@ class ViewRouter: ViewRouterProtocol {
     }
     
     // MARK: Presenter to Router
-//    func pushToQRScreen(from vc: UIViewController?) {
-//        let QrVc = QRCodeScannerRouter.createModule()
-//        let nav = UINavigationController(rootViewController: QrVc)
-//
-//        vc?.present(nav, animated: true)
-//    }
+    func navigateToHistoryTransaction(from nav: UINavigationController?, data: DonutChartData) {
+        let historyVc = TableViewRouter.createModule(data: data)
+        nav?.pushViewController(historyVc, animated: true)
+    }
 }
