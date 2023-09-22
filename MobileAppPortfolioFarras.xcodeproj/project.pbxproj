@@ -18,6 +18,14 @@
 		EDD76D402ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D3F2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift */; };
 		EDD76D5A2ABC44DC007BA34E /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D592ABC44DC007BA34E /* PieChartCell.swift */; };
 		EDD76D5C2ABC44EA007BA34E /* LineChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76D5B2ABC44EA007BA34E /* LineChartCell.swift */; };
+		EDFCDFB72ABD0EA400C366C2 /* BNIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFB62ABD0EA400C366C2 /* BNIHelper.swift */; };
+		EDFCDFBA2ABD0F1D00C366C2 /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFB92ABD0F1D00C366C2 /* ViewPresenter.swift */; };
+		EDFCDFBC2ABD0F2800C366C2 /* ViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFBB2ABD0F2800C366C2 /* ViewInteractor.swift */; };
+		EDFCDFBE2ABD0F3400C366C2 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFBD2ABD0F3400C366C2 /* ViewRouter.swift */; };
+		EDFCDFC02ABD10BA00C366C2 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFBF2ABD10BA00C366C2 /* LineChart.swift */; };
+		EDFCDFC22ABD10D000C366C2 /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFC12ABD10D000C366C2 /* DonutChart.swift */; };
+		EDFCDFC42ABD10E300C366C2 /* DonutChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFC32ABD10E300C366C2 /* DonutChartData.swift */; };
+		EDFCDFC62ABD10F600C366C2 /* HistoryTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFC52ABD10F600C366C2 /* HistoryTransaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,14 @@
 		EDD76D3F2ABBF1F4007BA34E /* MobileAppPortfolioFarrasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppPortfolioFarrasTests.swift; sourceTree = "<group>"; };
 		EDD76D592ABC44DC007BA34E /* PieChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
 		EDD76D5B2ABC44EA007BA34E /* LineChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartCell.swift; sourceTree = "<group>"; };
+		EDFCDFB62ABD0EA400C366C2 /* BNIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIHelper.swift; sourceTree = "<group>"; };
+		EDFCDFB92ABD0F1D00C366C2 /* ViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = "<group>"; };
+		EDFCDFBB2ABD0F2800C366C2 /* ViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInteractor.swift; sourceTree = "<group>"; };
+		EDFCDFBD2ABD0F3400C366C2 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		EDFCDFBF2ABD10BA00C366C2 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		EDFCDFC12ABD10D000C366C2 /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
+		EDFCDFC32ABD10E300C366C2 /* DonutChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartData.swift; sourceTree = "<group>"; };
+		EDFCDFC52ABD10F600C366C2 /* HistoryTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransaction.swift; sourceTree = "<group>"; };
 		EFCD52133A650E167FCC3C3F /* Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig"; path = "Target Support Files/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests/Pods-MobileAppPortfolioFarras-MobileAppPortfolioFarrasUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,10 +123,10 @@
 		EDD76D272ABBF1F2007BA34E /* MobileAppPortfolioFarras */ = {
 			isa = PBXGroup;
 			children = (
-				EDD76D582ABC44B7007BA34E /* Cells */,
+				EDFCDFB52ABD0E9A00C366C2 /* Helper */,
+				EDFCDFAF2ABD0E4500C366C2 /* View Controller */,
 				EDD76D282ABBF1F2007BA34E /* AppDelegate.swift */,
 				EDD76D2A2ABBF1F2007BA34E /* SceneDelegate.swift */,
-				EDD76D2C2ABBF1F2007BA34E /* ViewController.swift */,
 				EDD76D2E2ABBF1F2007BA34E /* Main.storyboard */,
 				EDD76D312ABBF1F4007BA34E /* Assets.xcassets */,
 				EDD76D332ABBF1F4007BA34E /* LaunchScreen.storyboard */,
@@ -134,6 +150,70 @@
 				EDD76D5B2ABC44EA007BA34E /* LineChartCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		EDFCDFAF2ABD0E4500C366C2 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFB42ABD0E7100C366C2 /* Router */,
+				EDFCDFB32ABD0E6C00C366C2 /* Entity */,
+				EDFCDFB22ABD0E6300C366C2 /* Presenter */,
+				EDFCDFB12ABD0E5D00C366C2 /* Interactor */,
+				EDFCDFB02ABD0E5700C366C2 /* View */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		EDFCDFB02ABD0E5700C366C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76D582ABC44B7007BA34E /* Cells */,
+				EDD76D2C2ABBF1F2007BA34E /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDFCDFB12ABD0E5D00C366C2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFBB2ABD0F2800C366C2 /* ViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EDFCDFB22ABD0E6300C366C2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFB92ABD0F1D00C366C2 /* ViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EDFCDFB32ABD0E6C00C366C2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFBF2ABD10BA00C366C2 /* LineChart.swift */,
+				EDFCDFC12ABD10D000C366C2 /* DonutChart.swift */,
+				EDFCDFC32ABD10E300C366C2 /* DonutChartData.swift */,
+				EDFCDFC52ABD10F600C366C2 /* HistoryTransaction.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EDFCDFB42ABD0E7100C366C2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFBD2ABD0F3400C366C2 /* ViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EDFCDFB52ABD0E9A00C366C2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFB62ABD0EA400C366C2 /* BNIHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		F9CB7561346A529492DAE294 /* Pods */ = {
@@ -318,10 +398,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD76D2D2ABBF1F2007BA34E /* ViewController.swift in Sources */,
+				EDFCDFB72ABD0EA400C366C2 /* BNIHelper.swift in Sources */,
+				EDFCDFBE2ABD0F3400C366C2 /* ViewRouter.swift in Sources */,
+				EDFCDFBA2ABD0F1D00C366C2 /* ViewPresenter.swift in Sources */,
+				EDFCDFC02ABD10BA00C366C2 /* LineChart.swift in Sources */,
+				EDFCDFC42ABD10E300C366C2 /* DonutChartData.swift in Sources */,
 				EDD76D5A2ABC44DC007BA34E /* PieChartCell.swift in Sources */,
 				EDD76D292ABBF1F2007BA34E /* AppDelegate.swift in Sources */,
+				EDFCDFC62ABD10F600C366C2 /* HistoryTransaction.swift in Sources */,
 				EDD76D2B2ABBF1F2007BA34E /* SceneDelegate.swift in Sources */,
 				EDD76D5C2ABC44EA007BA34E /* LineChartCell.swift in Sources */,
+				EDFCDFC22ABD10D000C366C2 /* DonutChart.swift in Sources */,
+				EDFCDFBC2ABD0F2800C366C2 /* ViewInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
